@@ -1,4 +1,4 @@
-const GROQ_API_KEY = "YOUR_GROQ_KEY_HERE";
+let GROQ_API_KEY = "";
 const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
 
 let studentClass = "";
@@ -7,6 +7,11 @@ let studentLang = "";
 let chatHistory = [];
 
 function startSession() {
+    GROQ_API_KEY = document.getElementById("apiKeyInput").value.trim();
+if (!GROQ_API_KEY) {
+  alert("Kripya Groq API Key daalein!");
+  return;
+}
   studentClass = document.getElementById("classSelect").value;
   studentSubject = document.getElementById("subjectSelect").value;
   studentLang = document.getElementById("langSelect").value;

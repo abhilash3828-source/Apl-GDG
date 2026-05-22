@@ -154,3 +154,18 @@ textarea {
 }
 
 .hidden { display: none !important; }
+.api-key-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.api-key-input input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #3a3a5a;
+  background: #0f0f1a;
+  color: #e8e8f0;
+  font-size: 0.95rem;
+}
