@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidyaSathi — UP Board AI Tutor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">📚 VidyaSathi</div>
+    <div class="tagline">UP Board Students ka AI Tutor — Hindi mein</div>
+  </header>
+
+  <!-- SETUP PANEL -->
+  <div class="setup-panel" id="setupPanel">
+    <h2>Apni Jaankari Bharein</h2>
+    <div class="selectors">
+      <select id="classSelect">
+        <option value="">-- Class Chunein --</option>
+        <option value="9">Class 9</option>
+        <option value="10">Class 10</option>
+        <option value="11">Class 11</option>
+        <option value="12">Class 12</option>
+      </select>
+      <select id="subjectSelect">
+        <option value="">-- Vishay Chunein --</option>
+        <option value="Ganit">Ganit (Math)</option>
+        <option value="Vigyan">Vigyan (Science)</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Samajik Vigyan">Samajik Vigyan (SST)</option>
+        <option value="Angrezi">Angrezi (English)</option>
+      </select>
+      <select id="langSelect">
+        <option value="Hindi">Hindi mein padhao</option>
+        <option value="Awadhi">Awadhi mein padhao</option>
+        <option value="Hinglish">Hinglish mein padhao</option>
+      </select>
+    </div>
+    <button id="startBtn" onclick="startSession()">
+      Padhai Shuru Karein 🚀
+    </button>
+  </div>
+
+  <!-- CHAT PANEL -->
+  <div class="chat-panel hidden" id="chatPanel">
+    <div class="chat-info" id="chatInfo"></div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message ai-message">
+        Namaste! Main aapka VidyaSathi hoon. Aaj hum kya padhenge? 
+        Koi sawaal poochein ya practice questions ke liye likhen: 
+        <b>"practice questions do"</b> 🙏
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <textarea id="userInput" placeholder="Yahan apna sawaal likhein..." rows="2"></textarea>
+      <button onclick="sendMessage()">Bhejein ➤</button>
+    </div>
+    <button class="reset-btn" onclick="resetSession()">🔄 Naya Vishay Chunein</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
